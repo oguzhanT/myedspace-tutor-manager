@@ -17,8 +17,11 @@
             </button>
         </form>
 
-        <a href="{{ route('login') }}" class="mt-4 inline-block text-blue-500">
-            Login with Social Account
-        </a>
+        <x-filament::page>
+            <form wire:submit.prevent="loginWithAuth0">
+                <button type="submit" class="btn btn-primary">Login with Auth0</button>
+            </form>
+        </x-filament::page>
+
     </div>
 </x-filament::page>

@@ -4,13 +4,12 @@ environments:
   production:
     memory: 1024
     cli-memory: 512
+    octane: true
     runtime: 'php-8.3:al2'
     build:
       - 'composer install --no-dev'
       - 'php artisan event:cache'
-      - 'npm ci && npm run build && rm -rf node_modules'
+      - 'npm run build'
     deploy:
         - 'php artisan migrate --force'
         - 'php artisan config:cache'
-        - 'php artisan route:cache'
-        - 'php artisan view:cache'
