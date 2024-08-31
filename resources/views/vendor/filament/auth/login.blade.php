@@ -8,8 +8,8 @@
             @csrf
 
             <!-- Your custom input fields, styling, etc. -->
-            <x-filament::form.input name="email" type="email" placeholder="Email" required />
-            <x-filament::form.input name="password" type="password" placeholder="Password" required />
+            <input  name="email" type="email" placeholder="Email" required />
+            <input name="password" type="password" placeholder="Password" required />
 
             <!-- Add custom buttons or links here -->
             <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded mt-4">
@@ -17,7 +17,7 @@
             </button>
         </form>
 
-        <a href="{{ route('social-login') }}" class="mt-4 inline-block text-blue-500">
+        <a href="{{ route('login') }}" class="mt-4 inline-block text-blue-500">
             Login with Social Account
         </a>
     </div>

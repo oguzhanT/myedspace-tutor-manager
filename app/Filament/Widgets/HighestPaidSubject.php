@@ -11,9 +11,9 @@ class HighestPaidSubject extends BaseWidget
 {
     protected static ?int $sort = 4;
 
-    protected static bool $isLazy = true;
+    protected static bool $isLazy = false;
 
-    protected int|string|array $columnSpan = '3';
+    protected int|string|array $columnSpan = '6';
 
     protected function getStats(): array
     {

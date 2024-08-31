@@ -9,6 +9,7 @@
         "auth0/login": "^7.8",
         "filament/actions": "^3.2",
         "filament/filament": "^3.2",
+        "filament/forms": "^3.2",
         "guzzlehttp/guzzle": "^7.9",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",

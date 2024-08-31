@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace app\Repositories;
 
 use App\Models\User;
 use Auth0\Laravel\UserRepositoryAbstract;
@@ -11,19 +11,17 @@ final class UserRepository extends UserRepositoryAbstract implements UserReposit
 {
     public function fromAccessToken(array $user): ?Authenticatable
     {
-
         return User::where('auth0', $user['sub'])->firstOrFail();
     }
 
-    public function fromSession(array $userData): ?Authenticatable
+    public function fromSession(array $user): ?Authenticatable
     {
-
-        $user = User::where('email', $userData['email'])->firstOrFail();
-        if ($user != null && $user->auth0 == null) {
-            $user->auth0 = $userData['sub'] ?? '';
-            $user->save();
+        $userData = User::where('email', $user['email'])->firstOrFail();
+        if ($userData != null && $userData->auth0 == null) {
+            $userData->auth0 = $user['sub'] ?? '';
+            $userData->save();
         }
 
-        return $user;
+        return $userData;
     }
 }

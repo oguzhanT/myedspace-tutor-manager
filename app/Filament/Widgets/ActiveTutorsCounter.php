@@ -10,9 +10,9 @@ class ActiveTutorsCounter extends BaseWidget
 {
     protected static ?int $sort = 1;
 
-    protected static bool $isLazy = true;
+    protected static bool $isLazy = false;
 
-    protected int|string|array $columnSpan = '3'; // Set to span the entire width
+    protected int|string|array $columnSpan = '6';
 
     protected function getStats(): array
     {

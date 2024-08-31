@@ -36,10 +36,9 @@ return [
     */
 
     'guards' => [
-
-        'auth0' => [
+        'web' => [
             'driver' => 'session',
-            'provider' => 'auth0-provider',
+            'provider' => 'users',
         ],
     ],
 
@@ -61,11 +60,6 @@ return [
     */
 
     'providers' => [
-        'auth0-provider' => [
-            'driver' => 'auth0.provider',
-            // 'model' => env('AUTH_MODEL', App\Models\User::class),
-            'repository' => \App\Repositories\UserRepository::class,
-        ],
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),

@@ -25,10 +25,8 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->authMiddleware([
-                Authenticate::class,
-            ])
-            ->authGuard('auth0')
+            ->authGuard('web')
+            ->login()
             ->brandName('MyEdSpace')
             ->brandLogo(asset('images/logo.svg'))
             ->darkMode(false)
@@ -54,6 +52,9 @@ class AdminPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
+            ])
+            ->authMiddleware([
+                Authenticate::class,
             ]);
     }
 }
