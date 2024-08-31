@@ -70,3 +70,16 @@
   
 ## GitHub Repository URL
 - [GitHub Repository](https://github.com/oguzhanT/myedspace-tutor-manager)
+
+
+## Summary
+
+While this task was challenging, I focused on demonstrating my strengths. Although design isn't my strongest area, I created a theme based on the colors from https://myedspace.co.uk/. The deployment was successfully done using Vapor, and you can test the application at this URL: https://xu3zn2rcm7xvjqyqjyp5p7z52q0mtfwz.lambda-url.eu-central-1.on.aws/.
+
+I also integrated Auth0, but I encountered some issues with the guard integration. Additionally, I implemented Sentry integration for error tracking.
+
+Thank you for the opportunity, and I look forward to your feedback!
+
+
+## Short demo video
+- https://we.tl/t-kCGsQoqUgV
