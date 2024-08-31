@@ -15,7 +15,8 @@
         "laravel/tinker": "^2.9",
         "laravel/vapor-cli": "^1.65",
         "laravel/vapor-core": "^2.37",
-        "predis/predis": "^2.2"
+        "predis/predis": "^2.2",
+        "sentry/sentry-laravel": "^4.8"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
